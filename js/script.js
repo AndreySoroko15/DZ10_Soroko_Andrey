@@ -110,9 +110,156 @@ if (day < 1 || day > 31) {
   console.log('Третья декада месяца');
 }
 
+/*-----------------------------------------------------------------------------------------------------
+9. Напишите скрипт, который переводит дни в года (условно 1г = 365дн), в месяцы 
+(условно 1м = 31день), в недели, в часы, в минуты и в секунды. Дробные результаты 
+вычислений принимаются. Если кол-ва дней не хватает до полного года, месяца, 
+недели, вывести сообщение «Меньше года», «Меньше месяца» и «Меньше недели», 
+соответственно. */
 
 
+let day$ = + prompt ('Введите количество дней', ''),
+    month = (day$ / 30),
+    week = Math.floor(day$/7),
+    hours = (day$ * 24),
+    minutes = (hours * 60),
+    seconds = (minutes * 60);
 
+switch (month) {
+  case 1:
+    alert('1 месяц')
+    break;
+  case 2:
+    alert('2 месяца')
+    break;
+  case 3:
+    alert('3 месяца')
+    break;
+  case 4:
+    alert('4 месяца')
+    break;
+  case 5:
+    alert('5 месяцев')
+    break;
+  case 6:
+    alert('6 месяцев')
+    break;
+  case 7:
+    alert('7 месяцев')
+    break;
+  case 8:
+    alert('8 месяцев')
+    break;
+  case 9:
+    alert('9 месяцев')
+    break;
+  case 10:
+    alert('10 месяцев')
+    break;
+  case 11:
+    alert('11 месяцев')
+    break;
+  case 12:
+    alert('1 год')
+    break;
+}
 
-
-
+if (month < 12 && month > 11) {
+  alert(`Меньше года:
+        11 месяцев и ${day$ % 30} дн.
+        Полных ${week} нед.
+        ${day$} дн.
+        ${hours} ч.
+        ${minutes} мин.
+        ${seconds} сек.`)
+} else if (month < 11 && month > 10) {
+  alert(`Меньше года:
+        10 месяцев и ${day$ % 30} дн.
+        Полных ${week} нед.
+        Полных ${week} нед.
+        ${day$} дн.
+        ${hours} ч.
+        ${minutes} мин.
+        ${seconds} сек.`)
+} else if (month < 10 && month > 9) {
+  alert(`Меньше года:
+        9 месяцев и ${day$ % 30} дн.
+        Полных ${week} нед.
+        ${day$} дн.
+        ${hours} ч.
+        ${minutes} мин.
+        ${seconds} сек.`)
+} else if (month < 9 && month > 8) {
+  alert(`Меньше года:
+        8 месяцев и ${day$ % 30} дн.
+        Полных ${week} нед.
+        ${day$} дн.
+        ${hours} ч.
+        ${minutes} мин.
+        ${seconds} сек.`)
+} else if (month < 8 && month > 7) {
+  alert(`Меньше года:
+        7 месяцев и ${day$ % 30} дн.
+        Полных ${week} нед.
+        ${day$} дн.
+        ${hours} ч.
+        ${minutes} мин.
+        ${seconds} сек.`)
+} else if (month < 7 && month > 6) {
+  alert(`Меньше года:
+        6 месяцев и ${day$ % 30} дн.
+        Полных ${week} нед.
+        ${day$} дн.
+        ${hours} ч.
+        ${minutes} мин.
+        ${seconds} сек.`)
+} else if (month < 6 && month > 5) {
+  alert(`Меньше года:
+        5 месяцев и ${day$ % 30} дн.
+        Полных ${week} нед.
+        ${day$} дн.
+        ${hours} ч.
+        ${minutes} мин.
+        ${seconds} сек.`)
+} else if (month < 5 && month > 4) {
+  alert(`Меньше года:
+        4 месяца и ${day$ % 30} дн.
+        Полных ${week} нед.
+        ${day$} дн.
+        ${hours} ч.
+        ${minutes} мин.
+        ${seconds} сек.`)
+} else if (month < 4 && month > 3) {
+  alert(`Меньше года:
+        3 месяца и ${day$ % 30} дн.
+        Полных ${week} нед.
+        ${day$} дн.
+        ${hours} ч.
+        ${minutes} мин.
+        ${seconds} сек.`)
+} else if (month < 3 && month > 2) {
+  alert(`Меньше года:
+        2 месяца и ${day$ % 30} дн.
+        Полных ${week} нед.
+        ${day$} дн.
+        ${hours} ч.
+        ${minutes} мин.
+        ${seconds} сек.`)
+} else if (month < 2 && month > 1) {
+  alert(`Меньше года:
+        1 месяц и ${day$ % 30} дн. 
+        Полных ${week} нед.
+        ${day$} дн.
+        ${hours} ч.
+        ${minutes} мин.
+        ${seconds} сек.`)
+} else if (month < 1 && month > 0) {
+  alert(`Неполный месяц:
+        ${day$} дн.
+        ${hours} ч.
+        ${day$} дн.
+        ${minutes} мин.
+        ${seconds} сек.`)
+} else {
+  alert(`Больше года: ${day$} дн.`)
+}
